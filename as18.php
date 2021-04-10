@@ -80,6 +80,7 @@ function InsertTable() {
         echo "<table class='table'>";
             echo "<thead class='thead-dark'>";
                 echo "<tr>";
+                echo "<th scope='col'>#</th>";
                 echo "<th scope='col'>Country</th>";
                 echo "<th scope='col'>Deaths</th>";
               #  echo "<th scope='col'>Last</th>";
@@ -92,12 +93,15 @@ function InsertTable() {
 function Filltable($countries_arr,$deaths_arr){
     
     # get the lenght of the array
-    $length_of_arr = count($countries_arr)-1;
+   # $length_of_arr = count($countries_arr)-1;
     
     #loop over the items in the array
-    for ($i = 0; $i <= $length_of_arr; $i++) {
+    for ($i = 0; $i <= 9; $i++) {
+        
+        $num_to_display = $i + 1;
         
         echo "<tr>";
+        echo "<td>" . $num_to_display . "</td>";
         echo "<td>" . $countries_arr[$i] . "</td>";
         echo "<td>" . $deaths_arr[$i] . "</td>";
         echo "</tr>";
@@ -115,15 +119,3 @@ function CloseTable(){
 }
     
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
